@@ -1,0 +1,24 @@
+.nav{
+    display: flex;
+    align-items:center;
+    justify-content: end;
+    width: 50%;
+    
+    
+    &-lien-accueil,&-lien-apropos{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 142.6%;
+        /* or 17px */
+        margin: 5px;
+        text-decoration: none;
+        color: #FF6060;
+
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+}
+
