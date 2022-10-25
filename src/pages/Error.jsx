@@ -1,10 +1,12 @@
-import React from 'react';
+import React, {Fragment} from 'react';
+import ErrorComponent  from '../components/ErrorComponent';
+
 
 const Error = () => {
     return (
-        <div>
-            
-        </div>
+        <Fragment>
+            <ErrorComponent />
+        </Fragment>
     );
 };
 

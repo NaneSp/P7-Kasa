@@ -1,10 +1,18 @@
-import React from 'react';
+import React, { Fragment } from 'react';
+import Collapse from '../components/Collapse';
+import Banner from '../components/Banner';
+
 
 const About = () => {
     return (
-        <div>
-            
-        </div>
+        <Fragment>
+            <Banner />
+             <Collapse /> 
+             <Collapse />
+             <Collapse />
+             <Collapse />
+             
+        </Fragment>
     );
 };
 

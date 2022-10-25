@@ -1,23 +1,26 @@
-.section1{
-    
+.section1 {
+
     margin-top: 25px;
     border-radius: 10px;
     width: 100%;
     height: 111px;
 
-    &-masque{
+    &-masque1 {
         //pour injection des diverses images de bannières suivant la page
+        position: relative;
         background-image: url(../../assets/bannerHomeM.png);
         border-radius: 10px;
         width: 100%;
         height: 111px;
         background-repeat: no-repeat;
-        
+        object-fit: cover;
 
 
-        h1{
+
+
+        h1 {
             position: absolute;
-            margin:31px 102px 32px 10px;
+            margin: 31px 102px 32px 10px;
             width: 217px;
             height: 48px;
             font-family: 'Montserrat';
@@ -28,5 +31,16 @@
             /* or 24px */
             color: #FFFFFF;
         }
+
+
+    }
+
+    &-masque2 {
+        background-image: url(../../assets/bannerAProposM.png);
+        border-radius: 10px;
+        width: 100%;
+        height: 111px;
+        background-repeat: no-repeat;
+        display: none;
     }
 }
