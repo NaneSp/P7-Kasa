@@ -22,9 +22,9 @@ const App = () => {
        {/*Route si ton chemin est l'accueil du site(=/) tu vas me fournir un composant (=accueil) */} 
         <Route path="/"element={<Home />} />
         <Route path="/About" element={<About />} />
-        <Route path="/Location" element={<Location />} />
+        <Route path="/Location/:id" element={<Location />} />
       {/*Si l'url ne correspond à rien de déclarer si dessus alors va à la page d'erreur 404*/}
-        <Route path="*"element={<Error />} />
+        {/*<Route path="*"element={<Error />} />*/}
       </Routes>
       </main>
       <Footer />

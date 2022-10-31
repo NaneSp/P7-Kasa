@@ -9,9 +9,10 @@
         flex-direction: row;
         justify-content: space-between;
         border-radius: 5px;
-        
         width: 100%;
-        padding: 2px;
+        padding: 3px 3px 3px 5px;
+        
+        
         
        
         
@@ -19,16 +20,9 @@
             
             margin: 0;
 
-            &-chevron{
-                display: flex;
-                justify-content: end;
-                padding-right: 5px;
-
-                
-            }
+            
         }
         &-text{
-            position: relative;
             margin: 0;
             background-color: #F6F6F6;
             width: 100%;
@@ -36,7 +30,10 @@
             border-radius: 0 0 5px 5px;
             
         }
-        
+        img{
+                object-fit:contain;
+                padding-right: 5px;
+        }
     }
 
 }

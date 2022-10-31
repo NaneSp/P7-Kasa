@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import {Link} from'react-router-dom';
 import Card from '../components/Card';
 import Banner from '../components/Banner';
@@ -10,7 +10,7 @@ import data from'../datas/data';
 const Home = () => {
     return (
         
-        <Fragment>
+        <>
             <Banner/>
             <section className='section2'>
                 {data.map((card) =>(
@@ -19,7 +19,7 @@ const Home = () => {
                     </Link>
                 ))}
             </section>
-        </Fragment>
+        </>
 
             
  

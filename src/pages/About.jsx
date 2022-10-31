@@ -1,18 +1,17 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import Collapse from '../components/Collapse';
 import Banner from '../components/Banner';
+import dataAbout from '../datas/dataAbout.json';
 
 
 const About = () => {
     return (
-        <Fragment>
+        <>
             <Banner />
-             <Collapse /> 
-             <Collapse />
-             <Collapse />
-             <Collapse />
-             
-        </Fragment>
+            {dataAbout.map((collapses) => (
+                <Collapse key={`${collapses.id}`} title={collapses.title} specificity={collapses.specificity} />
+            ))}
+        </>
     );
 };
 
