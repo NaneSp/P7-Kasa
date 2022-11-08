@@ -24,7 +24,7 @@ const App = () => {
         <Route path="/About" element={<About />} />
         <Route path="/Location/:id" element={<Location />} />
       {/*Si l'url ne correspond à rien de déclarer si dessus alors va à la page d'erreur 404*/}
-        {/*<Route path="*"element={<Error />} />*/}
+        <Route path="*"element={<Error />} />
       </Routes>
       </main>
       <Footer />

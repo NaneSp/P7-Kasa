@@ -4,7 +4,7 @@ import chevronBas from "../assets/VectorBas.png";
 import chevronHaut from "../assets/VectorHaut.png";
 
 
-export default function Collapse({title, specificity}){
+export default function Collapse({title, description}){
 
     const [isOpen, setIsOpen] = useState(false)
 
@@ -19,7 +19,7 @@ export default function Collapse({title, specificity}){
     ) : (
         <section className="section2-about">
         <div className="open-collapse" onClick={() => setIsOpen(true)}><p className="open-collapse-title">{title}</p><img src={chevronHaut} alt="chevron vers le haut" /></div>
-        <p className="open-collapse-text">{specificity}</p>
+        <p className="open-collapse-text">{description}</p>
         </section>
     )
     

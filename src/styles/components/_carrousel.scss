@@ -1,18 +1,31 @@
-.section2-carrousel{
+.carrousel{
+    
+    display: flex;
+    align-items: center;
     width: 100%;
     height: 255px;
-    border: black 2px solid;
     border-radius: 10px;
-    background-color: #E5E5E5;
+    position: relative;
+    
     
 
-
-    .chevronGauche , .chevronDroite{
-
-        width: 5%;
-        height: 5%;
+    &-chevron-gauche{
+        position: absolute;
+        margin-left: 5px;
         
-       
+    }
+
+
+    &-chevron-droite{
+        position: absolute;
+        margin-right: 5px;
+        right: 10px;
+
+    }
+    &-picture{
+        width: 100%;
+        border-radius: 15px;
+        
     }
     
 }

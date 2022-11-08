@@ -9,7 +9,7 @@ const About = () => {
         <>
             <Banner />
             {dataAbout.map((collapses) => (
-                <Collapse key={`${collapses.id}`} title={collapses.title} specificity={collapses.specificity} />
+                <Collapse key={`${collapses.id}`} title={collapses.title} description={collapses.description} />
             ))}
         </>
     );
