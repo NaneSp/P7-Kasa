@@ -6,7 +6,7 @@ import chevronHaut from "../assets/VectorHaut.png";
 
 export default function Collapse({title, description}){
 
-    const [isOpen, setIsOpen] = useState(false)
+    const [isOpen, setIsOpen] = useState(false);
 
 
 

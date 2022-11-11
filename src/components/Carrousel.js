@@ -1,56 +1,57 @@
+/* eslint-disable react/jsx-no-duplicate-props */
 import React, {useState} from 'react';
+//import {Navigate} from"react-router-dom";
+//import data from"../datas/data.json";
+import vectorLeft from "../assets/VectorGauche.png";
+import vectorRight from"../assets/VectorDroite.png";
 import "../styles/components/_carrousel.scss";
-import chevronGauche from "../assets/VectorGauche.png";
-import chevronDroite from "../assets/VectorDroite.png";
 
-function Carrousel({pictures}){
-    /*Créer un Hook d'état*/
-    let [displayPicture, changePicture ] = useState(0);
-    let lengthPicture = pictures.length;
 
-    //console.log("DONNE MOI LA LONGUEUR DU TABLEAU====>",lengthPicture);
+export default function Carrousel({pictures}){
 
-    const previous = () =>{
-        if(displayPicture === 0){
-            changePicture(lengthPicture -1);
-        }else{
-            changePicture(displayPicture -1);
-        }
-        return(changePicture);
-    };
+    const [current, setCurrent] = useState(0);
+    const length = pictures.length;
+    //console.log(length);//retourne bien la longueur du tableau pictures
 
-    const next = () =>{
-        if(displayPicture === lengthPicture -1){
-            changePicture(lengthPicture = 0);
-        }else{
-            changePicture(displayPicture +1);
-        }
-        return(changePicture);
     
+    const goNext = () => {
+        setCurrent(current === length -1 ? 0 : current +1);
+    };
+    //console.log(goNext);
+
+    const goPrevious = () => {
+        setCurrent(current === 0 ? length -1 : current -1);
     };
 
-    return(
-        <div className="carrousel">
-            {
-                lengthPicture > 1 && <img className="carrousel-chevron-gauche" src={chevronGauche} alt=" aller au précédent" onClick={previous} />
-            }
-            {
-                pictures.map((picture, index) =>{
-                    return(
-                        <img key={index} className={index === displayPicture ? 'carrousel-picture actif' : 'carrousel-picture'} src={picture} alt="location" />
+        return(
+            <section className=" carrousel">
+                {length > 1  && <img className="carrousel-arrow-left"src={vectorRight} alt="arrow-left" onClick={goNext}/>}
+                {length > 1 && <img className="carrousel-arrow-right"src={vectorLeft} alt="arrow-right" onClick={goPrevious}/>}
+                
+                {pictures.map((picture, index) => {
+                    return (
+                        <div key={index} className={ current === index ? "carrousel-picture-active" : "carrousel-picture-inactive"}>
+                            {index === current && (<img src={picture} className="carrousel-picture-active-object" alt="Logement de l'hôte sélectionné" />)}
+                            {index === current && (<span className="carrousel-picture-active-number">{current +1}/{length}</span>)}
+                        </div>
                     )
-                })
+                })}
 
-            }
-            {
-                lengthPicture > 1 && <img className="carrousel-chevron-droite" src ={chevronDroite} alt="suivant" onClick={next} />
-            }
-            
+                
+            </section>
+        )
+    
 
-        </div>
-    )
+
+
+
+
+
+
+
 
 
 }
 
-export default Carrousel;
+
+
