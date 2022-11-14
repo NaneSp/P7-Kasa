@@ -12,7 +12,8 @@
         position: absolute;
         left: 95%;
         top: 50%;
-        object-fit: contain;
+        object-fit: cover;
+        z-index: 999;
     }
     &-arrow-right{
 
@@ -21,7 +22,8 @@
         position: absolute;
         right: 95%;
         top: 50%;
-        object-fit: contain;
+        object-fit: cover;
+        z-index: 999;
     }
     &-picture-active{
         margin: 25px 0 10px 0;
@@ -32,6 +34,7 @@
             height: 100%;
             border-radius: 15px;
             object-fit: cover;
+            filter: brightness(0.9);
         }
         &-number{//version mobile sans number
             

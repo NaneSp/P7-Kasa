@@ -2,15 +2,13 @@
     
 
     &-lien{
-               
+       
         
-
         &-card{
             margin-top: 25px;
             display: flex;
             align-items: flex-end;
-            
-            
+        
             
             h2{
                 position: absolute;
@@ -20,15 +18,14 @@
                 line-height: 142.6%;
                 color: #FFFFFF;
                 margin: 0 25px 5px 10px;
+                z-index: 999;
             }
             img{
                 width: 100%;
                 height: 255px;
                 border-radius: 10px;
                 object-fit: cover;
-                background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
-            
-                //revoir le dégradé
+                filter: brightness(0.85);
             }
             
         }

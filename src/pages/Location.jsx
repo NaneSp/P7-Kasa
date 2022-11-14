@@ -20,6 +20,8 @@ const Location = () => {
         )
 
 
+    }else{
+        window.location.href="/Error";
     }
    
     
