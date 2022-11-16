@@ -18,7 +18,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color: #FF6060;
+            background-color: $color-bg0;
             margin: 10px 10px 0 0;
             padding: 5px 0px 5px 0px;
             border-radius: 5px;
@@ -28,7 +28,7 @@
             //line-height: 142.6%;
             /* or 14px */
             text-align:center;
-            color: #FFFFFF;
+            color: $color-font2;
             width: 84px;
             height: 25px;
         }

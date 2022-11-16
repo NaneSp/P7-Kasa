@@ -1,6 +1,5 @@
-import React from 'react';
-import '../styles/components/_ErrorComponent.scss';
 import { Link } from 'react-router-dom';
+
 
 const ErrorComponent = () => {
     return (

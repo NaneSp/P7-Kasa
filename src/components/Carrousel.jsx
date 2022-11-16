@@ -1,10 +1,6 @@
-/* eslint-disable react/jsx-no-duplicate-props */
-import React, {useState} from 'react';
-//import {Navigate} from"react-router-dom";
-//import data from"../datas/data.json";
+import {useState} from 'react';
 import vectorLeft from "../assets/VectorGauche.png";
 import vectorRight from"../assets/VectorDroite.png";
-import "../styles/components/_carrousel.scss";
 
 
 export default function Carrousel({pictures}){
@@ -24,21 +20,19 @@ export default function Carrousel({pictures}){
     };
 
         return(
-            <section className=" carrousel">
-                {length > 1  && <img className="carrousel-arrow-left"src={vectorRight} alt="arrow-left" onClick={goNext}/>}
-                {length > 1 && <img className="carrousel-arrow-right"src={vectorLeft} alt="arrow-right" onClick={goPrevious}/>}
+                <section className=" carrousel">
+                    {length > 1  && <img className="carrousel-arrow-left"src={vectorRight} alt="arrow-left" onClick={goNext}/>}
+                    {length > 1 && <img className="carrousel-arrow-right"src={vectorLeft} alt="arrow-right" onClick={goPrevious}/>}
                 
-                {pictures.map((picture, index) => {
-                    return (
-                        <div key={index} className={ current === index ? "carrousel-picture-active" : "carrousel-picture-inactive"}>
-                            {index === current && (<img src={picture} className="carrousel-picture-active-object" alt="Logement de l'hôte sélectionné" />)}
-                            {index === current && (<span className="carrousel-picture-active-number">{current +1}/{length}</span>)}
-                        </div>
-                    )
-                })}
-
-                
-            </section>
+                    {pictures.map((picture, index) => {
+                        return (
+                                <div key={index} className={ current === index ? "carrousel-picture-active" : "carrousel-picture-inactive"}>
+                                    {index === current && (<img src={picture} className="carrousel-picture-active-object" alt="Logement de l'hôte sélectionné" />)}
+                                    {index === current && (<span className="carrousel-picture-active-number">{current +1}/{length}</span>)}
+                                </div>
+                        )
+                    })}   
+                </section>
         )
     
 

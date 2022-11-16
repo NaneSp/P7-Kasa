@@ -1,6 +1,3 @@
-import React from 'react';
-import '../styles/components/_banner.scss';
-
 const Banner = ({imgBanner, titleBanner}) => {
     return (
             <section className='section1'>
