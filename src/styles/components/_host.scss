@@ -1,63 +1,48 @@
-.host{
-    
-
-    &-title-location{
+.title{
         
-        display: flex;
-        flex-direction: column;
         line-height: 142.6%;
         font-style: normal;
         font-weight: 500;
         font-size: 18px;
-
-
-        &-info{
-            
-            font-style: normal;
-            font-weight: 500;
-            font-size: 18px;
-        }
-        &-place{
-            
-            font-style: normal;
-            font-weight: 500;
-            font-size: 14px;
-            line-height: 142.6%;
-        }
+        margin: 0;
     }
-    
-    &-tags-rating{
+.location{
         
-        display: flex;
-        flex-direction: column;
-
-        &-container{
-
-            margin-top: 20px;
-            display: flex;
-            justify-content:space-between;
-            align-items: center;
-
-            &-name{
-            width: 25%;
-            font-style: normal;
-            font-weight: 500;
-            font-size: 12px;
-            line-height: 142.6%;
-            /* or 17px */
-
-            
-            text-align: right;
-            }
-            &-picture{
-            
-            border-radius: 100%;
-            width: 15%;
-            object-fit:cover;
-
-            }
-        }
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 142.6%;
+        margin: 10px 0 0 0;
     }
+
+.host{
+    
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 50%;
+
+    &__name{
+                
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 142.6%;
+        width: 50%;
+        text-align: right;
+       
+    }
+    &__picture{
+        margin: 3px;
+        border-radius: 50%;
+        width: 35%;
+    }
+
+
 
 
 }
+    
+    
+
+

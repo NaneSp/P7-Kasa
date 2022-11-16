@@ -1,8 +1,7 @@
-import React from 'react';
-import Collapse from '../components/Collapse';
-import Banner from '../components/Banner';
-import imgBannerAbout from"../assets/bannerAProposM.png";
-import dataAbout from '../datas/dataAbout.json';
+import Collapse from "../components/Collapse";
+import Banner from "../components/Banner";
+import imgBannerAbout from "../assets/bannerAProposM.png";
+import dataAbout from "../datas/dataAbout.json";
 
 
 const About = () => {

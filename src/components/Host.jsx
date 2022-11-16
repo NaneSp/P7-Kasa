@@ -1,12 +1,9 @@
-import React from 'react';
-
-
 const Host = ({host}) => {
     return (
             <>
-                <div className="host-container">
-                    <span className="host-tags-rating-container-name">{host.name}</span>
-                    <img className="host-tags-rating-container-picture"src={host.picture} alt={host.name} />
+                <div className="host">
+                    <h3 className="host__name">{host.name}</h3>
+                    <img className="host__picture"src={host.picture} alt={host.name} />
                 </div>
             </>  
  

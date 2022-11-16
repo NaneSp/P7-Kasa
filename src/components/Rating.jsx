@@ -1,5 +1,5 @@
-import star from'../assets/etoilePleine.png';
-import starEmpty from'../assets/etoileVide.png';
+import star from "../assets/etoilePleine.png";
+import starEmpty from "../assets/etoileVide.png";
 
 
 const Rating = ({rating}) => {

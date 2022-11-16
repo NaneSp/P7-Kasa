@@ -1,5 +1,4 @@
-import React from 'react';
-import ErrorComponent  from '../components/ErrorComponent';
+import ErrorComponent  from "../components/ErrorComponent";
 
 
 const Error = () => {
