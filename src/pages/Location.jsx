@@ -10,7 +10,7 @@ import data from '../datas/data';
 const Location = () => {
     const idLocation =useParams();
     const getIdLocation = data.find(({id}) => id === idLocation.id);
-    console.log(getIdLocation.rating);
+    //console.log(getIdLocation.rating);
     
     return(
             <>
