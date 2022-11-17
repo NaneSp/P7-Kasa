@@ -17,7 +17,6 @@ function App() {
     <BrowserRouter className="App">
       <main className='container'>
         <Header />
-
         <Routes>
           {/*Route si ton chemin est l'accueil du site(=/) tu vas me fournir un composant (=accueil) */}
           <Route path="/" element={<Home />} />
