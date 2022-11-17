@@ -48,3 +48,25 @@
         
     }
 
+/****************Desktop Version*********************/
+
+@media screen and (min-width:992px){
+
+    .prev__collapse{
+        
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        img{
+            width: 2%;
+            
+        }
+
+        .collapse, .open__collapse, .open__collapse__text{
+            width: 80%;
+        }
+        
+    }
+}

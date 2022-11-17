@@ -1,6 +1,6 @@
 import {useState} from "react";
 import vectorLeft from "../assets/VectorGauche.png";
-import vectorRight from"../assets/VectorDroite.png";
+import vectorRight from"../assets/VectorDroit.png";
 
 
 export default function Carrousel({pictures}){

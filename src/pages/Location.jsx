@@ -1,4 +1,4 @@
-import {useParams} from "react-router-dom";
+import {useParams, useNavigate} from "react-router-dom";
 import Carrousel from "../components/Carrousel";
 import Host from "../components/Host";
 import Tags from "../components/Tags";
@@ -9,6 +9,8 @@ import data from "../datas/data";
 
 const Location = () => {
     const idLocation =useParams();
+    const navigate = useNavigate();
+    console.log(navigate);
     const getIdLocation = data.find(({id}) => id === idLocation.id);
     //console.log(getIdLocation.rating);
 
@@ -22,7 +24,11 @@ const Location = () => {
         return <li key={index} className="open__collapse__text__list">{equipments}</li>
     });
     
-    if(getIdLocation !== undefined){
+    if( getIdLocation === undefined){
+        navigate("/404");
+    }else{
+
+    
     return(
             <section className="set__location">
                 <Carrousel pictures={getIdLocation.pictures} />
@@ -43,8 +49,6 @@ const Location = () => {
                 </article> 
             </section>
     )
-}else{
-    
 }
      
     

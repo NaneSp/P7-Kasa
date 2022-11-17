@@ -1,6 +1,6 @@
 .banner {
 
-    margin-top: 25px;
+    margin: 55px 0 25px 0;
     border-radius: 10px;
     width: 100%;
     height: 111px;
@@ -40,12 +40,67 @@
         object-fit: cover;
         opacity: 0.75;
         }
-        
-
-       
-
-
+    
     }
 
+}
+
+/****************Desktop Version*********************/
+
+@media screen and (min-width:992px){
+
+    .banner {
+        
+        height: 323px;
+        
+        
     
+        &__title {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            bottom:400px;
+            right: 280px;
+            margin: 78px 262px 77px 273px;
+            width: 100%;
+            height: 100%;
+            font-family: $police;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 48px;
+            
+            color: $color-font2;
+        
+            
+            
+        }
+        
+    
+        &__masque {
+            background-color: $color-bg3;
+            border-radius: 10px;
+            width: 100%;
+            height: 100%;
+            filter: brightness(1);
+            
+            img{
+            position: relative;
+            border-radius: 10px;
+            width: 100%;
+            height: 100%;
+            background-repeat: no-repeat;
+            object-fit: cover;
+            opacity: 0.75;
+            }
+        
+        }
+    
+    }
+
+
+
+
+
+
 }

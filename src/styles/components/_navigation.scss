@@ -5,7 +5,7 @@
     width: 50%;
     
     
-    &__link-accueil,&__link-apropos{
+    &__link-accueil{
         font-family: $police;
         font-style: normal;
         font-weight: 500;
@@ -15,6 +15,24 @@
         margin: 5px;
         text-decoration: none;
         color: $color-font1;
+        
+
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+    &__link-apropos{
+        font-family: $police;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 142.6%;
+        /* or 17px */
+        margin: 5px;
+        text-decoration: none;
+        color: $color-font1;
+        text-transform: uppercase;
+        
 
         &:hover{
             text-decoration: underline;
@@ -22,3 +40,55 @@
     }
 }
 
+/****************DESKTOP VERSION************************/
+
+@media screen and (min-width: 992px){
+
+    .nav{
+        
+        display: flex;
+        align-items:center;
+        justify-content: center;
+        width: 309px;
+        
+        
+        
+        &__link-accueil{
+            font-family: $police;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 142.6%;
+            margin: 19px;
+            text-decoration: none;
+            color: $color-font1;
+            
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+
+        &__link-apropos{
+            font-family: $police;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 142.6%;
+            margin: 19px;
+            text-decoration: none;
+            color: $color-font1;
+            text-transform: none;
+
+           &:hover{
+                text-decoration: underline;
+            } 
+        }
+    }
+
+
+
+
+
+
+
+}

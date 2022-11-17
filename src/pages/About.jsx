@@ -1,6 +1,6 @@
 import Collapse from "../components/Collapse";
 import Banner from "../components/Banner";
-import imgBannerAbout from "../assets/bannerAProposM.png";
+import imgBannerAbout from "../assets/bannerAProposD.png";
 import dataAbout from "../datas/dataAbout.json";
 
 
