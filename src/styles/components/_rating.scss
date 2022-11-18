@@ -5,10 +5,46 @@
     flex-direction: row-reverse;
     align-items: center;
     
+
+    .rating{
+
+       
+        width: 50%;
+    }
+    
     
     .star{
     
-    width: 10%;
+    width: 15px;
+    height: 15px;
+
+}
+}
+
+/****************Desktop Version*********************/
+
+@media screen and (min-width:992px){
+.host__rating{
+    
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+
+    .rating{
+        
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 20px;
+        
+        .star{
+            width: 30px;
+            height: 30px;
+        }
+    }
+    
+
 
 }
 }

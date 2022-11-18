@@ -40,6 +40,62 @@
 
 
 }
+
+/****************Desktop Version*********************/
+
+@media screen and (min-width:992px){
+    .location__title{
+       
+        display: flex;
+        justify-content: space-between;
+
+        
+
+
+    .title{
+        font-style: normal;
+        font-weight: 500;
+        font-size: 36px;
+        margin: 0;
+
+    }
+    .location{
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        margin: 0 0 20px 0;
+    }
+    
+
+    
+
+        .host{
+            
+            width: 50%;
+            
+
+            &__name{
+                width: 28%;
+                text-align: right;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 142.6%;
+                margin: 15px;
+
+            }
+            &__picture{
+                
+                width: 64px;
+                height: 64px;
+            }
+        }
+
+
+    
+}
+}
+
     
     
 

@@ -32,21 +32,32 @@ const Location = () => {
     return(
             <section className="set__location">
                 <Carrousel pictures={getIdLocation.pictures} />
-                <article className="location__host">
-                    <h1 className='title'>{getIdLocation.title}</h1>
-                    <h2 className='location'>{getIdLocation.location}</h2> 
-                    <div className="tags">
-                        <Tags tags={tagsLocation} />
-                    </div>
-                    <div className="host__rating">
-                        <Host host={getIdLocation.host} />
-                        <Rating rating={getIdLocation.rating} />
+                <article className="location">
+                    <div className="location__title">
+                    <div className="location__title__tags"> 
+                        <h1 className='title'>{getIdLocation.title}</h1>
+                        <h2 className='location'>{getIdLocation.location}</h2> 
+                           
+                            <div className="tags">
+                                <Tags tags={tagsLocation} />
+                            </div>
+                            </div>
+                            <div className="host__rating">
+                                <Host host={getIdLocation.host} />
+                                <Rating rating={getIdLocation.rating} />
+                            
+                        </div>
                     </div>
                     <div className="descritpion__equipments">
-                        <Collapse title="Descritpion" description={getIdLocation.description} />
-                        <Collapse title="Équipements" description={equipmentsLocation} />
+                        <div className="description">
+                            <Collapse title="Descritpion" description={getIdLocation.description} />
+                        </div>
+                        <div className="equipments">
+                            <Collapse title="Équipements" description={equipmentsLocation} />
+                        </div>
                     </div> 
-                </article> 
+                 
+                </article>
             </section>
     )
 }

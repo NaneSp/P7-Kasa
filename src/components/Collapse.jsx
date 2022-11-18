@@ -9,13 +9,17 @@ export default function Collapse({title, description}){
 
         return isOpen ? (
                 <div className="prev__collapse">
-                    <div className="collapse" onClick={() => setIsOpen(false)}><h3 className="collapse__title">{title}</h3><img src={chevronBas} alt="chevron vers le bas" />
+                    <div className="collapse__container">
+                        <div className="collapse" onClick={() => setIsOpen(false)}><h3 className="collapse__title">{title}</h3><img src={chevronBas} alt="chevron vers le bas" />
+                        </div>
                     </div>
                 </div>
                 ) : (
                 <div className="prev__collapse">
-                    <div className="open__collapse" onClick={() => setIsOpen(true)}><h3 className="open__collapse__title">{title}</h3><img src={chevronHaut} alt="chevron vers le haut" /></div>
-                    <p className="open__collapse__text">{description}</p>
+                    <div className="collapse__container">
+                        <div className="open__collapse" onClick={() => setIsOpen(true)}><h3 className="open__collapse__title">{title}</h3><img src={chevronHaut} alt="chevron vers le haut" /></div>
+                        <p className="open__collapse__text">{description}</p>
+                    </div>
                 </div>
                     )
     
