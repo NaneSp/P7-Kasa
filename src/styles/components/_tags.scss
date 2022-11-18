@@ -38,5 +38,38 @@
     }
     }
 
+/****************Desktop Version*********************/
 
+@media screen and (min-width:992px){
+
+.tags{
+    
+    width: 70%;
+    
+
+    &__container{
+
+        
+        width: 100%;
+
+        &__object{
+
+            
+            width: 28%;
+            height: 25px;
+            align-items: center;
+            font-size: 14px;
+            display: inline-block;
+        }
+    }
+}
+
+.location__title__tags{
+    
+    width: 80%;
+}
+
+
+
+}
 

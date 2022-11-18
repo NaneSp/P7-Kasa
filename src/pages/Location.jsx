@@ -21,12 +21,12 @@ const Location = () => {
 
      /*Equipments*/
      const equipmentsLocation = getIdLocation.equipments.map((equipments, index) =>{
-        return <li key={index} className="open__collapse__text__list">{equipments}</li>
+        return <ul> <li key={index} className="open__collapse__text__list">{equipments}</li></ul>
     });
     
-    if( getIdLocation === undefined){
-        navigate("/404");
-    }else{
+    if (getIdLocation === undefined) {
+		navigate('/404', { state: { message: 'Error' } })
+	}
 
     
     return(
@@ -60,7 +60,7 @@ const Location = () => {
                 </article>
             </section>
     )
-}
+
      
     
 };
