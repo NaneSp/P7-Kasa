@@ -1,4 +1,4 @@
-import {useState} from "react";
+import {useState} from "react"; //utilisation du hook qui permet d'ajouter une variable d'état au composant 
 import vectorLeft from "../assets/VectorGauche.png";
 import vectorRight from"../assets/VectorDroit.png";
 
@@ -6,13 +6,13 @@ import vectorRight from"../assets/VectorDroit.png";
 export default function Carrousel({pictures}){
 
     const [current, setCurrent] = useState(0);//initialisation de la valeur de départ 
-    console.log("POSITION INITIALE ===>",current);//retourne le n° de de la photo / le nb de photo totales 
+    //console.log("POSITION INITIALE ===>",current);//retourne le n° de de la photo / le nb de photo totales 
     const length = pictures.length;
-    console.log("LENGTH -1 ===>",length -1);//retourne bien la longueur du tableau pictures soit le nb de photo pr l'id sélectionné -1
+    //console.log("LENGTH -1 ===>",length -1);//retourne bien la longueur du tableau pictures soit le nb de photo pr l'id sélectionné -1
 
     
     const goNext = () => {
-        /*modification de la valeur initiale "current"pour aller à photo suivante:
+        /*appel du setFonction pour modification de la valeur initiale "current"pour aller à photo suivante:
         la valeur initiale est strictement égale au nb de photo -1 ? si vrai renvoie 0 (permet de faire repartir de 0 les photos une fois quelles ont ttes étaient vues ) sinon renvoie la valeur initiale+1*/
         setCurrent(current === length -1 ? 0 : current +1);
     };

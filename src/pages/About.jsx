@@ -8,8 +8,8 @@ const About = () => {
     return (
         <>
             <Banner imgBanner={imgBannerAbout} titleBanner=""/>
-            {dataAbout.map((collapses) => (
-                <Collapse key={`${collapses.id}`} title={collapses.title} description={collapses.description} />
+            {dataAbout.map((collapses, index) => (
+                <Collapse key={index} title={collapses.title} description={collapses.description} />
             ))}
         </>
     );

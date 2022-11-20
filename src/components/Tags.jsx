@@ -2,7 +2,7 @@ const Tags = ({tags}) => {
    
     return (
             <>
-                <div className="tags__container">{tags}</div>
+                <div className="tags__container__object">{tags}</div>
             </>
     );
 };

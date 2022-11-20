@@ -7,16 +7,16 @@ import data from "../datas/data";
 
 
 
-const Home = (index) => {
+const Home = () => {
     //utilisation de la méthode map qui permet d'itérer sur des données et de retourner un tableau d'éléments.
     //console.log(data);
     return (
             <>
-                <Banner key={index} imgBanner={imgBanner} titleBanner="Chez vous, partout et ailleurs"/>
+                <Banner imgBanner={imgBanner} titleBanner="Chez vous, partout et ailleurs"/>
                 <section className='card'>
                     {data.map((card) =>(
-                        <div className="card__location">
-                            <Link className='card__location__link' key={`${card.id}`} to={`/Location/${card.id}`}>
+                        <div className="card__location" key={`${card.id}`}>
+                            <Link className='card__location__link'  to={`/Location/${card.id}`}>
                                 <Card key={`${card.id}`} cover={card.cover} title={card.title} />
                             </Link>
                         </div>

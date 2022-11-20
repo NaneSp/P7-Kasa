@@ -1,4 +1,5 @@
-import {useParams, useNavigate} from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";// import hook useParams pr récup l'id + useNavigate pour gérer les routes 
+import { useEffect, useState } from "react"; //import hook useState pr gére l'état du composant + useEffect Hook d'effet
 import Carrousel from "../components/Carrousel";
 import Host from "../components/Host";
 import Tags from "../components/Tags";
@@ -6,64 +7,78 @@ import Rating from "../components/Rating";
 import Collapse from "../components/Collapse";
 import data from "../datas/data";
 
-
 const Location = () => {
-    const idLocation =useParams();
-    //console.log(idLocation);//retourne l'id de la location sélectionnée en accueil avec le HOOk de récup d'id
-    const navigate = useNavigate();
-    //console.log(navigate);
-    const getIdLocation = data.find(({id}) => id === idLocation.id);
-    //console.log(getIdLocation.rating);
+	const idLocation = useParams();
+	//console.log("ENVOI L'ID DU LOGEMENT SELECTIONNÉ",idLocation);//retourne bien l'id 
+	const navigate = useNavigate();// à utiliser avec un hook d'effet 
+	
+	const [appart, setAppart] = useState();//initialisation de l'état de départ
+	//console.log(appart.title);
+	//console.log(appart.cover);
 
-    /*Tags*/
-    const tagsLocation = getIdLocation.tags.map((tags, index) => {
-        return <div key={index} className="tags__container__object">{tags}</div>
-    })
+	
+	useEffect(() => {
+		const getAppartInfos = () => {
+			const getIdLocation = data.find(({ id }) => id === idLocation.id)//recherche de l'id 
+			//console.log(getIdLocation);//retourne le détail du logement par l'id sélectionné
+			//mappage et vérification de l'état si mon id n'est pas défini alors renvoie vers la page d'erreur
+			data.map(() => setAppart(getIdLocation))
+			if (getIdLocation === undefined) {
+				navigate('/404', { state: { message: 'Error' } })
+			}
+		}
+		getAppartInfos()
+	})
 
-     /*Equipments*/
-     const equipmentsLocation = getIdLocation.equipments.map((equipments, index) =>{
-        return  <li key={index} className="open__collapse__text__list">{equipments}</li>
-    });
-    
-    if (getIdLocation === undefined) {
-		navigate('/404', { state: { message: 'Error' } })
-	}
+	/*Tags*/
+	const tagsLocation = appart && appart.tags;
+	//console.log(tagsLocation);
 
-    
-    return(
-            <section className="set__location">
-                <Carrousel pictures={getIdLocation.pictures} />
-                <article className="location">
-                    <div className="location__title">
-                    <div className="location__title__tags"> 
-                        <h1 className='title'>{getIdLocation.title}</h1>
-                        <h2 className='locationh2'>{getIdLocation.location}</h2> 
-                           
-                            <div className="tags">
-                                <Tags tags={tagsLocation} />
-                            </div>
-                            </div>
-                            <div className="host__rating">
-                                <Host host={getIdLocation.host} />
-                                <Rating rating={getIdLocation.rating} />
-                            
-                        </div>
-                    </div>
-                    <div className="descritpion__equipments">
-                        <div className="description">
-                            <Collapse title="Description" description={getIdLocation.description} />
-                        </div>
-                        <div className="equipments">
-                            <Collapse title="Équipements" description={equipmentsLocation} />
-                        </div>
-                    </div> 
-                 
-                </article>
-            </section>
-    )
+	/*Equipments*/
+	const equipmentsLocation =
+		appart &&
+		appart.equipments.map((equipments, index) => {
+			return (
+				<li key={index} className="open__collapse__text__list">
+					{equipments}
+				</li>
+			)
+		})
 
-     
-    
-};
+	return (
+		appart && (
+			<section className="set__location" key={appart.id}>
+				<Carrousel pictures={appart.pictures} />
+				<article className="location">
+					<div className="location__title">
+						<div className="location__title__tags">
+							<h1 className="title">{appart.title}</h1>
+							<h2 className="locationh2">{appart.location}</h2>
+							<div className="tags">
+								<div className="tags__container">
+									{tagsLocation.map((tag) => (
+										<Tags tags={tag} key={tag} />
+									))}
+								</div>
+							</div>
+						</div>
+						<div className="host__rating">
+							<Host host={appart.host} />
+							<Rating rating={appart.rating} />
+						</div>
+					</div>
+					<div className="descritpion__equipments">
+						<div className="description">
+							<Collapse title="Description" description={appart.description} />
+						</div>
+						<div className="equipments">
+							<Collapse title="Équipements" description={equipmentsLocation} />
+						</div>
+					</div>
+				</article>
+			</section>
+		)
+	)
+}
 
-export default Location;
+export default Location
