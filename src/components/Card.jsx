@@ -3,7 +3,7 @@ const Card = ({cover, title}) => {
             <article className="card__location__link__global">
                 <img src={cover} className="card__location__link__global__img"alt="location disponible"/>
                 <div className="card__location__link__global__title">
-                    <h2 className="title__card">{title}</h2>
+                    <h2 className="card__location__link__global__title__card">{title}</h2>
                 </div>
             </article>
     );

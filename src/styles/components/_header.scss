@@ -2,13 +2,12 @@
     margin: 15px;
 .header{
     margin: auto;
-    display: flex;
-    justify-content: space-between;
+    @include flexRSb;
     width: 100%;
     
 
     &__logo{
-        width: 45%;
+        width: 35%;
     }}
 
 }
@@ -21,8 +20,7 @@
         margin: 50px 100px 50px 100px;
     .header{
         margin: auto;
-        display: flex;
-        justify-content: space-between;
+        @include flexRSb;
         width: 100%;
         
     

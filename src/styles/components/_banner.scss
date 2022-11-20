@@ -1,9 +1,7 @@
 .banner {
 
-    margin: 55px 0 25px 0;
-    border-radius: 10px;
-    width: 100%;
-    height: 111px;
+    margin: 20px 0 25px 0;
+    @include w100h111r10;
 
     &__title {
         position: relative;
@@ -25,17 +23,13 @@
     
 
     &__masque {
-        background-color: $color-bg3;
-        border-radius: 10px;
-        width: 100%;
-        height: 111px;
+        background-color: $color-bg2;
+        @include w100h111r10;
         filter: brightness(1);
         
         img{
         position: relative;
-        border-radius: 10px;
-        width: 100%;
-        height: 111px;
+        @include w100h111r10;
         background-repeat: no-repeat;
         object-fit: cover;
         opacity: 0.75;
@@ -50,26 +44,20 @@
 @media screen and (min-width:992px){
 
     .banner {
-        
+        margin-top: 60px;
         height: 323px;
         
         
     
         &__title {
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            @include flexCC;
             position: relative;
             bottom:400px;
             right: 280px;
             margin: 78px 262px 77px 273px;
-            width: 100%;
-            height: 100%;
+            @include w100h100;
             font-family: $police;
-            font-style: normal;
-            font-weight: 500;
-            font-size: 48px;
-            
+            @include font48;
             color: $color-font2;
         
             
@@ -78,17 +66,15 @@
         
     
         &__masque {
-            background-color: $color-bg3;
-            border-radius: 10px;
-            width: 100%;
-            height: 100%;
+            background-color: $color-bg2;
+            @include w100h100;
+            border-radius: 25px;
             filter: brightness(1);
             
             img{
             position: relative;
-            border-radius: 10px;
-            width: 100%;
-            height: 100%;
+            @include w100h100;
+            border-radius: 25px;
             background-repeat: no-repeat;
             object-fit: cover;
             opacity: 0.75;

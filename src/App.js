@@ -1,20 +1,19 @@
-import React from 'react';
+import React from "react";
 //composants de navigation qui va gérer les routes 
-//BrowserRouter englobe toutes l'application à l'intérieur un autre composant Routes puis nos routes réelles route 
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Header from'./components/Header';
-import Home from './pages/Home';
-import About from './pages/About';
-import Location from './pages/Location';
-import Error from './pages/Error';
-import Footer from'./components/Footer';
+import { Routes, Route } from "react-router-dom";
+import Header from "./components/Header";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Location from "./pages/Location";
+import Error from "./pages/Error";
+import Footer from "./components/Footer";
 import "./styles/_settings.scss";
 
 
 
 function App() {
   return (
-    <BrowserRouter className="App">
+    <div className="App">
       <main className='container'>
         <Header />
         <Routes>
@@ -27,7 +26,7 @@ function App() {
         </Routes>
       </main>
       <Footer />
-    </BrowserRouter>
+    </div>
   );
 }
 

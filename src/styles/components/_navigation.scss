@@ -7,14 +7,13 @@
     
     &__link-accueil{
         font-family: $police;
-        font-style: normal;
-        font-weight: 500;
-        font-size: 12px;
+        @include font12w500;
         line-height: 142.6%;
         /* or 17px */
         margin: 5px;
         text-decoration: none;
         color: $color-font1;
+        text-transform: uppercase;
         
 
         &:hover{
@@ -23,9 +22,7 @@
     }
     &__link-apropos{
         font-family: $police;
-        font-style: normal;
-        font-weight: 500;
-        font-size: 12px;
+        @include font12w500;
         line-height: 142.6%;
         /* or 17px */
         margin: 5px;
@@ -46,22 +43,19 @@
 
     .nav{
         
-        display: flex;
-        align-items:center;
-        justify-content: center;
+        @include flexCC;
         width: 309px;
         
         
         
         &__link-accueil{
             font-family: $police;
-            font-style: normal;
-            font-weight: 500;
-            font-size: 24px;
+            @include font24w500;
             line-height: 142.6%;
             margin: 19px;
             text-decoration: none;
             color: $color-font1;
+            text-transform: none;
             
             &:hover{
                 text-decoration: underline;
@@ -70,9 +64,7 @@
 
         &__link-apropos{
             font-family: $police;
-            font-style: normal;
-            font-weight: 500;
-            font-size: 24px;
+            @include font24w500;
             line-height: 142.6%;
             margin: 19px;
             text-decoration: none;

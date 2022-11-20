@@ -1,18 +1,16 @@
+.location{
+    margin-top: 15px;
 .title{
         
         line-height: 142.6%;
-        font-style: normal;
-        font-weight: 500;
-        font-size: 18px;
+        @include font18;
         margin: 0;
     }
-.location{
+.locationh2{
         
-        font-style: normal;
-        font-weight: 500;
-        font-size: 14px;
+        @include font14w500;
         line-height: 142.6%;
-        margin: 10px 0 0 0;
+        margin: 5px 0 0 0;
     }
 
 .host{
@@ -24,12 +22,11 @@
 
     &__name{
                 
-        font-style: normal;
-        font-weight: 500;
-        font-size: 12px;
+        @include font12w500;
         line-height: 142.6%;
         width: 50%;
         text-align: right;
+        margin-right: 10.5px;
        
     }
     &__picture{
@@ -37,32 +34,30 @@
         border-radius: 50%;
         width: 35%;
     }
-
+}
 
 }
 
 /****************Desktop Version*********************/
 
 @media screen and (min-width:992px){
-    .location__title{
+    .location{
+        margin-top: 30px;
+
+    &__title{
        
-        display: flex;
-        justify-content: space-between;
+        @include flexRSb;
 
         
 
 
     .title{
-        font-style: normal;
-        font-weight: 500;
-        font-size: 36px;
+        @include font36w500;
         margin: 0;
 
     }
-    .location{
-        font-style: normal;
-        font-weight: 500;
-        font-size: 18px;
+    .locationh2{
+        @include font18;
         margin: 0 0 20px 0;
     }
     
@@ -77,11 +72,9 @@
             &__name{
                 width: 28%;
                 text-align: right;
-                font-style: normal;
-                font-weight: 500;
-                font-size: 18px;
+                @include font18;
                 line-height: 142.6%;
-                margin: 15px;
+                margin: 10px;
 
             }
             &__picture{
@@ -91,7 +84,7 @@
             }
         }
 
-
+    }
     
 }
 }

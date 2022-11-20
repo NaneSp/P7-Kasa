@@ -27,9 +27,7 @@
 .host__rating{
     
     width: 40%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+    @include flexColFe;
 
 
     .rating{

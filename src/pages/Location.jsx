@@ -36,7 +36,7 @@ const Location = () => {
                     <div className="location__title">
                     <div className="location__title__tags"> 
                         <h1 className='title'>{getIdLocation.title}</h1>
-                        <h2 className='location'>{getIdLocation.location}</h2> 
+                        <h2 className='locationh2'>{getIdLocation.location}</h2> 
                            
                             <div className="tags">
                                 <Tags tags={tagsLocation} />
@@ -50,7 +50,7 @@ const Location = () => {
                     </div>
                     <div className="descritpion__equipments">
                         <div className="description">
-                            <Collapse title="Descritpion" description={getIdLocation.description} />
+                            <Collapse title="Description" description={getIdLocation.description} />
                         </div>
                         <div className="equipments">
                             <Collapse title="Équipements" description={equipmentsLocation} />
