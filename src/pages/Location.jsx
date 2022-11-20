@@ -9,8 +9,9 @@ import data from "../datas/data";
 
 const Location = () => {
     const idLocation =useParams();
+    //console.log(idLocation);//retourne l'id de la location sélectionnée en accueil avec le HOOk de récup d'id
     const navigate = useNavigate();
-    console.log(navigate);
+    //console.log(navigate);
     const getIdLocation = data.find(({id}) => id === idLocation.id);
     //console.log(getIdLocation.rating);
 
@@ -21,7 +22,7 @@ const Location = () => {
 
      /*Equipments*/
      const equipmentsLocation = getIdLocation.equipments.map((equipments, index) =>{
-        return <ul> <li key={index} className="open__collapse__text__list">{equipments}</li></ul>
+        return  <li key={index} className="open__collapse__text__list">{equipments}</li>
     });
     
     if (getIdLocation === undefined) {

@@ -5,8 +5,7 @@ import chevronHaut from "../assets/VectorHaut.png";
 
 export default function Collapse({title, description}){
 
-    const [isOpen, setIsOpen] = useState(true);
-
+    const [isOpen, setIsOpen] = useState(true);//initialisation de la valeur de départ => ouvert = true : fermé =false
         return isOpen ? (
                 <div className="prev__collapse">
                     <div className="collapse__container">

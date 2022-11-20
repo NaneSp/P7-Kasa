@@ -7,10 +7,12 @@ import data from "../datas/data";
 
 
 
-const Home = () => {
+const Home = (index) => {
+    //utilisation de la méthode map qui permet d'itérer sur des données et de retourner un tableau d'éléments.
+    //console.log(data);
     return (
             <>
-                <Banner imgBanner={imgBanner} titleBanner="Chez vous, partout et ailleurs"/>
+                <Banner key={index} imgBanner={imgBanner} titleBanner="Chez vous, partout et ailleurs"/>
                 <section className='card'>
                     {data.map((card) =>(
                         <div className="card__location">
