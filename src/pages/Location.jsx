@@ -12,7 +12,7 @@ const Location = () => {
 	//console.log("ENVOI L'ID DU LOGEMENT SELECTIONNÉ",idLocation);//retourne bien l'id 
 	const navigate = useNavigate();// à utiliser avec un hook d'effet 
 	
-	const [appart, setAppart] = useState();//initialisation de l'état de départ
+	const [appart, setAppart] = useState();//initialisation de l'état de départ en attente (on attend que setAppart soit implémenté pr avoir la valeur à ce moment là)
 	//console.log(appart.title);
 	//console.log(appart.cover);
 
@@ -27,11 +27,11 @@ const Location = () => {
 				navigate('/404', { state: { message: 'Error' } })
 			}
 		}
-		getAppartInfos()
-	})
+		getAppartInfos();
+	},[]);//tableau de dépendances vide pr effet unique après le render de mon composant 
 
 	/*Tags*/
-	const tagsLocation = appart && appart.tags;
+	const tagsLocation = appart && appart.tags;//contrôle qu'on a bien une valeur, le state initial est màj grâce au setAppart. à chaque clic de card on récup les infos, on les stock ds le state une seule x(tableau de dép vide useEffect) et on peut ainsi aller chercher les infos dedans quand on veut 
 	//console.log(tagsLocation);
 
 	/*Equipments*/
