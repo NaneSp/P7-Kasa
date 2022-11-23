@@ -71,12 +71,34 @@
 
         &__location{
             //border: green solid 4px;
-            width: 340px;
-            height: 340px;
-            margin-right: 56px;
-            margin-bottom: 50px;
+            width: 28%;
+            height: 200px;
+            margin-right: 5%;
+            margin-bottom: 5%;
+            
+            .card__location__link__global__title{
+                //border: maroon solid 4px;
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                display: flex;
+                align-items: end;
+
+                &__card{
+                    //border: magenta solid 4px;
+                    width: 100%;
+                    position: relative;
+                    top : 6%;
+                    text-align:baseline;
+                    padding-bottom: 15px;
+                    margin: 5px;
+
+                    
+                }
+            }
 
         }
+        
 
 
     }

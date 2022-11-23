@@ -7,7 +7,7 @@ import About from "./pages/About";
 import Location from "./pages/Location";
 import Error from "./pages/Error";
 import Footer from "./components/Footer";
-import "./styles/_settings.scss";
+//import "./styles/_settings.scss";
 
 
 

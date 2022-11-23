@@ -28,7 +28,7 @@ const Location = () => {
 			}
 		}
 		getAppartInfos();
-		// eslint-disable-next-line
+		
 	},[]);//tableau de dépendances vide pr effet unique après le render de mon composant 
 
 	/*Tags*/
