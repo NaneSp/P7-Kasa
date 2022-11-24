@@ -6,7 +6,7 @@
     &__title {
         position: relative;
         margin: 31px 102px 32px 10px;
-        width: 217px;
+        width: 50%;
         height: 48px;
         bottom: 100%;
         font-family: $police;
@@ -51,11 +51,13 @@
         
     
         &__title {
+            border: green solid 4px;
             @include flexCC;
             position: relative;
             bottom:400px;
             right: 280px;
             margin: 78px 262px 77px 273px;
+            padding-left: 50px;
             @include w100h100;
             font-family: $police;
             @include font48;
